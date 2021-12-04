@@ -3,7 +3,7 @@
 
 Bu projede swagger.io'da yer alan Petstore API'leri kullanılmıştır.
 
-![](C:\Users\ramazan\Desktop\Ramazan_TUYLUOGLU_HW\RamazanTUYLUOGLU_Homeworks\Week2\PostmanApiTests\petstorescreen.png)
+![](https://github.com/ciceksepetibootcamp/Ramazan_TUYLUOGLU_Homework/blob/main/Week2/PostmanApiTests/enviroment.PNG)
 
 
 
@@ -13,7 +13,7 @@ Bu proje için Pet Store Enviroment Dosyası oluşturulmuştur.
 
 Dosya içerisinde tüm methodlarda ortak olarak kullanılan base url ve birçok methodta ortak kullanılan değerler tanımlanmıştır.
 
-![](C:\Users\ramazan\Desktop\Ramazan_TUYLUOGLU_HW\RamazanTUYLUOGLU_Homeworks\Week2\PostmanApiTests\enviroment.PNG)
+![](https://github.com/ciceksepetibootcamp/Ramazan_TUYLUOGLU_Homework/blob/main/Week2/PostmanApiTests/petstorescreen.png)
 
 
 
