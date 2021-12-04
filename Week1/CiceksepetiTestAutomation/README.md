@@ -20,7 +20,7 @@ Hello👋,This is my second Test Automation Project.I used Page Object Model in 
 
 🟢The user clicks the searchbox form control area
 
-🟢The user texts the Address
+🟢The user textsthe Address
 
 🟢The user clicks on the first address in the list.
 
