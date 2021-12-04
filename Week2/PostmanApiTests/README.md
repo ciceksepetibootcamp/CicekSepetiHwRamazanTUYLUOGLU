@@ -19,7 +19,6 @@ Dosya içerisinde tüm methodlarda ortak olarak kullanılan base url ve birçok 
 
 **Proje içerisinde Pet,Store ve User adında 3 adet klasör yer almaktadır.**
 
-[TOC]
 
 ### Pet 
 
