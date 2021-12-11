@@ -20,7 +20,7 @@ For example:
 
 This project was made according to Behavior Driven Development.
 
-![image-20211206213042499]("week3/MorhipoCpBDDTest/image-20211206213042499.png")
+![image-20211206213042499](https://github.com/ciceksepetibootcamp/Ramazan_TUYLUOGLU_Homework/blob/main/week3/MorhipoCpBDDTest/image-20211206213042499.png")
 
 >
 
@@ -92,7 +92,7 @@ I set the dependencies needed for the project.
 
 I used to Page Object Model in this project. So I set my functions,Constant variables and Tests different folders.
 
-![image-20211206211858659]"(week3/MorhipoCpBDDTest/image-20211206211858659.png")
+![image-20211206211858659]"(https://github.com/ciceksepetibootcamp/Ramazan_TUYLUOGLU_Homework/blob/main/week3/MorhipoCpBDDTest/image-20211206211858659.pngg")
 
 >
 >
