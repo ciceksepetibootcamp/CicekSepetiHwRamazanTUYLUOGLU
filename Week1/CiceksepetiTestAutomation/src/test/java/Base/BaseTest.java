@@ -17,12 +17,12 @@ public class BaseTest {  public static WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "src/test/java/webDriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 20);
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 8);
         driver.navigate().to("https://www.ciceksepeti.com");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); // Driver elementlere erişim için 10 sn bekleme süresi tanınır
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(200)); //Sayfaların timeouta düşme süresi tanınır
-        driver.findElement(By.xpath("//span[@class='icon-close']")).click(); // Gönderim Adres Popup Kapatma
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(8));
+        driver.findElement(By.xpath("//span[@class='icon-close']")).click();
     }
 
 
