@@ -26,7 +26,7 @@ cityName     null           => status is 400
 
 
 
-![eekran](C:\Users\ramazan\Desktop\eekran.PNG)
+![eekran](https://github.com/ciceksepetibootcamp/Ramazan_TUYLUOGLU_Homework/blob/main/PostmanIntegrationTest/eekran.PNG)
 
 
 
