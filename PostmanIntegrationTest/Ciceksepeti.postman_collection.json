@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "44772b69-d999-4854-ba5c-0ea3d1d49cbe",
+		"name": "Ciceksepeti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List comments from Ankara",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"İstanbul için yorumlar listesi\")\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var lenght = jsonData.reviewDtos.length;\r",
+							"for (let i = 0; i < lenght; i++){\r",
+							"    pm.expect(jsonData.reviewDtos[i].name).to.be.a('string');\r",
+							"    pm.expect(jsonData.reviewDtos[i].comment).to.be.a('string');\r",
+							"    pm.expect(jsonData.reviewDtos[i].rating).to.be.a('number');\r",
+							"    pm.expect(jsonData.reviewDtos[i].createOn).to.be.a('string');\r",
+							"    pm.expect(jsonData.reviewDtos[i].cityName).to.be.a('string');\r",
+							"    pm.expect((jsonData.reviewDtos[i].cityName).toLowerCase() == \"ankara\").to.be.true;\r",
+							"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}?cityName=ankara",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cityName",
+							"value": "ankara"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List comments from İstanbul",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"İstanbul için yorumlar listesi\")\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var lenght = jsonData.reviewDtos.length;\r",
+							"for (let i = 0; i < lenght; i++){\r",
+							"    pm.expect(jsonData.reviewDtos[i].name).to.be.a('string');\r",
+							"    pm.expect(jsonData.reviewDtos[i].comment).to.be.a('string');\r",
+							"    pm.expect(jsonData.reviewDtos[i].rating).to.be.a('number');\r",
+							"    pm.expect(jsonData.reviewDtos[i].createOn).to.be.a('string');\r",
+							"    pm.expect(jsonData.reviewDtos[i].cityName).to.be.a('string');\r",
+							"    pm.expect((jsonData.reviewDtos[i].cityName).toLowerCase() == \"istanbul\").to.be.true;\r",
+							"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cityName=istanbul",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cityName",
+							"value": "istanbul"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List comments from Van",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Comments are not found\")\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.expect(jsonData.message == \"Not Found\").to.be.true"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cityName=van",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cityName",
+							"value": "van"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List comments is null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"CityName can not be null.\")\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.expect(jsonData.cityName == \"'cityName' can not be null.\").to.be.true"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cityName",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cityName",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
