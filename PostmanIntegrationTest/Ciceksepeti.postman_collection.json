@@ -16,7 +16,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"İstanbul için yorumlar listesi\")\r",
+							"pm.test(\"Ankara için yorumlar listesi\")\r",
 							"var jsonData = JSON.parse(responseBody);\r",
 							"var lenght = jsonData.reviewDtos.length;\r",
 							"for (let i = 0; i < lenght; i++){\r",
