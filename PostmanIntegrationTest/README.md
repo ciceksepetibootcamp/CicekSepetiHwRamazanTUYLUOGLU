@@ -20,7 +20,7 @@ cityName     null           => status is 400
 
 
 
-![hatay](C:\Users\ramazan\Desktop\hatay.PNG)
+![hatay](https://github.com/ciceksepetibootcamp/Ramazan_TUYLUOGLU_Homework/blob/main/PostmanIntegrationTest/hatay.PNG)
 
 
 
